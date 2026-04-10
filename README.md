@@ -5,19 +5,19 @@
 - Feyzanur Buyur
 - Asya Naz Uyanık
 - Yasemin Mehter
-- Samet Şen
+- Samed Şen
 
 ## Proje Açıklaması
 Bu proje, bir otoparkın yönetimini simüle eden konsol tabanlı bir 
 yazılım sistemidir. Sistem, araçların otoparka girişini ve çıkışını 
 takip eder, müsait yer kontrolü yapar ve araçları giriş saatine göre 
-sıralayabilir. Proje, nesne yönelimli olmayan C dili kullanılarak 
-modüler bir yapıda geliştirilmiştir.
+sıralayabilir. Proje Python dili kullanılarak modüler bir yapıda 
+geliştirilmiştir.
 
 ## Kullanılan Veri Yapısı
-Veri yapısı olarak dizi (Array) tercih edilmiştir. Otoparkın sabit 
+Veri yapısı olarak liste (List) tercih edilmiştir. Otoparkın sabit 
 bir kapasitesi olduğundan ve araçlara plaka numarasıyla rastgele 
-erişim gerektiğinden dizi en uygun seçenek olarak belirlenmiştir.
+erişim gerektiğinden liste en uygun seçenek olarak belirlenmiştir.
 
 ## Özellikler
 - Araç park etme
@@ -28,28 +28,18 @@ erişim gerektiğinden dizi en uygun seçenek olarak belirlenmiştir.
 - Tüm otoparkı listeleme
 
 ## Gereksinimler
-- GCC derleyici
-- MacOS veya Linux işletim sistemi
-
-## Derleme
-Projeyi derlemek için terminal üzerinden aşağıdaki komutu çalıştırın:
-
-gcc src/main.c src/vehicle.c src/parkinglot.c -o parking
+- Python 3.x
 
 ## Çalıştırma
-Derleme tamamlandıktan sonra programı çalıştırmak için:
-
-./parking
+python3 src/main.py
 
 ## Dosya Yapısı
 parking-lot-system/
 ├── README.md
 └── src/
-    ├── vehicle.h       → Vehicle ADT tanımı ve fonksiyon prototipleri
-    ├── vehicle.c       → Vehicle fonksiyonlarının implementasyonu
-    ├── parkinglot.h    → ParkingLot ADT tanımı ve fonksiyon prototipleri
-    ├── parkinglot.c    → ParkingLot fonksiyonlarının implementasyonu
-    └── main.c          → Ana program ve kullanıcı arayüzü
+    ├── vehicle.py      → Vehicle sınıfı
+    ├── parkinglot.py   → ParkingLot sınıfı
+    └── main.py         → Ana program ve kullanıcı arayüzü
 
 ## Örnek Kullanım
 Program çalıştırıldığında aşağıdaki menü görüntülenir:
@@ -62,7 +52,3 @@ Program çalıştırıldığında aşağıdaki menü görüntülenir:
 5. Giriş Saatine Göre Sırala
 6. Otoparkı Göster
 0. Çıkış
-
-Menüden istediğiniz işlemi seçerek devam edebilirsiniz.
-Araç park ederken plaka, sahip adı, araç tipi ve giriş saati 
-bilgilerini girmeniz gerekmektedir.
