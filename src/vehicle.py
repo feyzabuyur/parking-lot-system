@@ -4,7 +4,7 @@ class Vehicle:
         self.license_plate = license_plate  # Plaka numarası
         self.owner_name = owner_name        # Araç sahibinin adı
         self.vehicle_type = vehicle_type    # Araç tipi
-        self.entry_time = entry_time        # Giriş saati (örn: 1430 = 14:30)
+        self.entry_time = entry_time        # Giriş saati 
 
     def print_vehicle(self):
         print(f"Plaka     : {self.license_plate}")
